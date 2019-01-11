@@ -30,4 +30,6 @@ php artisan migrate
 php artisan db:seed
 ```
 
+navigate to app /pub folder when you open app in browser
+
 I will reorganize codes when I have time so you can have better understanding.
