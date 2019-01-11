@@ -3,12 +3,16 @@
 # installation
 
 run following command to import project in the command line
+git should be installed
 ```
 git clone https://github.com/mehmetuygun/action-task-list.git
 ```
+
+go to under application directory and
 run following command to update dependency in the command line
+composer should be installed
 ```
-git clone https://github.com/mehmetuygun/action-task-list.git
+composer update
 ```
 duplicate .env.example file then change it as .env
 open the .env file and change following as your need
