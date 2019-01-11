@@ -29,3 +29,5 @@ php artisan migrate
 /** this command will seed action table according to database/data/test_data.json
 php artisan db:seed
 ```
+
+I will reorganize codes when I have time so you can have better understanding.
