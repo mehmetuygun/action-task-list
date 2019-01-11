@@ -18,3 +18,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+	Route::prefix('api/')->group(function () {
+		Route::get('get/action', 'Api\ActionController@getAction');
+		Route::post('post/action', 'Api\ActionController@saveAction');
+		Route::post('uncomplete/action/{id}', 'Api\ActionController@uncompleteAction');
+	});
+	Route::get('download/photo/{id}', function($id) {
+		$action = App\Action::find($id);
+		if ($action) {
+			$file = storage_path('app/photos/'.$id.'/'.$action->file_name);
+			if (file_exists($file)) {
+				return response()->download($file);
+			}
+			return redirect()->back();
+		}
+	});
+});

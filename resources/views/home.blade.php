@@ -6,11 +6,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Dashboard</div>
-
                 <div class="card-body">
-
-                    
-
+                    <action-component></action-component>
                 </div>
             </div>
         </div>
