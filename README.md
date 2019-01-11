@@ -25,5 +25,7 @@ run following commmands to set up app in the command line
 php artisan key:generate
 php artisan migrate
 /** if you already ran this command and getting error in the second time use command php artisan migrate:refresh **/
+
+/** this command will seed action table according to database/data/test_data.json
 php artisan db:seed
 ```
